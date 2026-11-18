@@ -4,11 +4,12 @@ import { useLocation, Link } from 'react-router-dom';
 
 export default function WhatsAppButton() {
   const location = useLocation();
-  // WhatsApp link (ready to plug phone number, e.g., https://wa.me/?text=...)
+  // WhatsApp official number (Kirana: 0895-6064-93314 -> 62895606493314)
+  const phoneNumber = '62895606493314';
   const defaultMessage = encodeURIComponent(
-    "Halo Admin DEOSIRIH, saya tertarik dan ingin memesan DEOSIRIH Herbal Deodorant Spray (100 mL). Boleh info ketersediaan stoknya?"
+    "Halo Kak Kirana (Admin DEOSIRIH), saya tertarik dan ingin memesan DEOSIRIH Herbal Deodorant Spray (100 mL). Boleh info ketersediaan stoknya?"
   );
-  const waUrl = `https://wa.me/?text=${defaultMessage}`;
+  const waUrl = `https://wa.me/${phoneNumber}?text=${defaultMessage}`;
 
   return (
     <>
@@ -31,7 +32,7 @@ export default function WhatsAppButton() {
             className="flex-[2] py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.98] text-white font-bold text-xs sm:text-sm shadow-md shadow-emerald-500/30 flex items-center justify-center gap-2 transition-all animate-pulse-wa"
           >
             <MessageCircle className="w-4 h-4 fill-white" />
-            <span>Beli Sekarang via WhatsApp</span>
+            <span>Chat Kirana via WhatsApp</span>
           </a>
         </div>
       </div>
@@ -43,7 +44,7 @@ export default function WhatsAppButton() {
           target="_blank"
           rel="noopener noreferrer"
           className="group flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba59] text-white px-5 py-3.5 rounded-full shadow-xl shadow-emerald-600/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-pulse-wa"
-          title="Chat Admin WhatsApp DEOSIRIH"
+          title="Chat WhatsApp Kirana - Admin DEOSIRIH (0895-6064-93314)"
         >
           <div className="relative">
             <MessageCircle className="w-6 h-6 fill-white" />
@@ -51,7 +52,7 @@ export default function WhatsAppButton() {
           </div>
           <div className="text-left">
             <span className="block text-[10px] uppercase font-bold tracking-wider text-emerald-100 leading-none">
-              Respon Cepat
+              Respon Cepat (Kirana)
             </span>
             <span className="block text-sm font-extrabold tracking-tight">
               Beli via WhatsApp

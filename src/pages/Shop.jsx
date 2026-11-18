@@ -46,6 +46,9 @@ export default function Shop() {
     { name: "Alkohol 70%", img: "/images/bahan-alkohol.jpg" }
   ];
 
+  // WhatsApp official contact: Kirana (0895-6064-93314)
+  const waPhoneNumber = '62895606493314';
+
   // Format IDR currency
   const formatRupiah = (val) => {
     return new Intl.NumberFormat('id-ID', {
@@ -58,7 +61,7 @@ export default function Shop() {
   // Generate customized WhatsApp URL
   const buildWhatsAppUrl = () => {
     const lines = [
-      "Halo Admin DEOSIRIH, saya ingin memesan produk Herbal Deodorant Spray:",
+      "Halo Kak Kirana (Admin DEOSIRIH), saya ingin memesan produk Herbal Deodorant Spray:",
       "",
       `*Detail Pesanan:*`,
       `• Produk: DEOSIRIH Herbal Deodorant Spray 100 mL`,
@@ -77,10 +80,10 @@ export default function Shop() {
     }
 
     lines.push("");
-    lines.push("Mohon info ketersediaan stok & ongkos kirimnya. Terima kasih!");
+    lines.push("Mohon info ketersediaan stok & nomor rekeningnya. Terima kasih Kak Kirana!");
 
     const message = encodeURIComponent(lines.join("\n"));
-    return `https://wa.me/?text=${message}`;
+    return `https://wa.me/${waPhoneNumber}?text=${message}`;
   };
 
   return (
@@ -377,11 +380,11 @@ export default function Shop() {
                     className="w-full py-4 px-6 rounded-2xl bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.99] text-white font-extrabold text-base sm:text-lg shadow-lg shadow-emerald-500/30 flex items-center justify-center gap-3 transition-all animate-pulse-wa"
                   >
                     <MessageCircle className="w-6 h-6 fill-white" />
-                    <span>Beli Sekarang via WhatsApp</span>
+                    <span>Pesan via WhatsApp (Kirana)</span>
                   </a>
 
                   <p className="text-center text-[11px] text-slate-500">
-                    Tombol akan membuka WhatsApp dengan format pesanan yang terisi otomatis. Anda dapat langsung mengirim pesan ke nomor bisnis resmi.
+                    Pesanan akan langsung terhubung ke WhatsApp resmi <strong>Kirana (0895-6064-93314)</strong> dengan format pesanan yang terisi otomatis.
                   </p>
                 </div>
 

@@ -104,7 +104,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-mint-400 shrink-0" />
-                <span>Layanan Konsultasi & CS: +62 8XX-XXXX-XXXX</span>
+                <span>CS & Pemesanan: <strong>Kirana (0895-6064-93314)</strong></span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-mint-400 shrink-0" />
